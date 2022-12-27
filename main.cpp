@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 class Card
@@ -31,15 +31,16 @@ public:
     }
 };
 
-// Explosive Type (High damage, medium health)
+// Explosive Type (High damage, medium health) --------------------------------------------------
+// Explosive #1
 class Bomba: public Card {
 public:
     Bomba()
     {
         name="Bomba";
         type = "Explosive";
-        damage = 500;
-        health = 200;
+        damage = 200;
+        health = 425;
         cout << setw(10) << name << " has been summoned\n";
     }
 
@@ -49,7 +50,175 @@ public:
     }
 };
 
-// Hunter Type (High damage, low health)
+// Explosive #2
+class Nuker: public Card {
+public:
+    Nuker()
+    {
+        name="Nuker";
+        type = "Explosive";
+        damage = 350;
+        health = 225;
+        cout << setw(10) << name << " has been summoned\n";
+    }
+
+    ~Nuker()
+    {
+        cout << name << " has been destroyed\n";
+    }
+};
+
+// Explosive #3
+class Detonator: public Card {
+public:
+    Detonator()
+    {
+        name="Detonator";
+        type = "Explosive";
+        damage = 450;
+        health = 100;
+        cout << setw(10) << name << " has been summoned\n";
+    }
+
+    ~Detonator()
+    {
+        cout << name << " has been destroyed\n";
+    }
+};
+
+// Explosive #4
+class Pop: public Card {
+public:
+    Pop()
+    {
+        name="Pop";
+        type = "Explosive";
+        damage = 275;
+        health = 325;
+        cout << setw(10) << name << " has been summoned\n";
+    }
+
+    ~Pop()
+    {
+        cout << name << " has been destroyed\n";
+    }
+};
+
+// Explosive #5
+class Eradicator: public Card {
+public:
+    Eradicator()
+    {
+        name="Eradicator";
+        type = "Explosive";
+        damage = 300;
+        health = 300;
+        cout << setw(10) << name << " has been summoned\n";
+    }
+
+    ~Eradicator()
+    {
+        cout << name << " has been destroyed\n";
+    }
+};
+// Explosive Monsters ~END~ -------------------------------------------------------------------------
+
+
+// hunter Type (High damage, low health) --------------------------------------------------
+
+// hunter #1
+class Yogi: public Card {
+public:
+    Yogi()
+    {
+        name="Yogi";
+        type = "Hunter";
+        damage = 350;
+        health = 189;
+        cout << setw(10) << name << " has been summoned\n";
+    }
+
+    ~Yogi()
+    {
+        cout << name << " has been destroyed\n";
+    }
+};
+
+// hunter #2
+
+class GoGo: public Card {
+public:
+    GoGo()
+    {
+        name="GoGo";
+        type = "Hunter";
+        damage = 400;
+        health = 200;
+        cout << setw(10) << name << " has been summoned\n";
+    }
+
+    ~GoGo()
+    {
+        cout << name << " has been destroyed\n";
+    }
+};
+
+//hunter #3
+class Leo: public Card {
+public:
+    Leo()
+    {
+        name="Leo";
+        type = "Hunter";
+        damage = 390;
+        health = 193;
+        cout << setw(10) << name << " has been summoned\n";
+    }
+
+    ~Leo()
+    {
+        cout << name << " has been destroyed\n";
+    }
+};
+
+//hunter #4
+class Avatar: public Card {
+public:
+    Avatar()
+    {
+        name="Avatar";
+        type = "Hunter";
+        damage = 380;
+        health = 190;
+        cout << setw(10) << name << " has been summoned\n";
+    }
+
+    ~Avatar()
+    {
+        cout << name << " has been destroyed\n";
+    }
+};
+
+//hunter #5
+class Vendora: public Card {
+public:
+    Vendora()
+    {
+        name="Vendora";
+        type = "Hunter";
+        damage = 369;
+        health = 196;
+        cout << setw(10) << name << " has been summoned\n";
+    }
+
+    ~Vendora()
+    {
+        cout << name << " has been destroyed\n";
+    }
+};
+
+
+// hunter  Monsters ~END~ -------------------------------------------------------------------------
 
 // Giants Type (low damage, high health)
 
