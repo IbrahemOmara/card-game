@@ -1,59 +1,92 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Cards
+class Card
 {
-    public: 
-        string name="";
-        int power, defense, stars;
-        virtual void setHealth(int attack) = 0;
-        virtual void get() = 0;
+public: 
+    string name="", type="";
+    int damage, health;
+    
+    void getStats()
+    {   
+        cout << "His name is " << name << endl;
+        cout << "His type is " << type << endl;
+        cout << "Current Health: " << health << "\n";
+        cout << "Attack Power: " << damage << "\n";
+    }    
+    
+    void printDamage() {
+        cout << name << " has " << damage << " points " << endl;
+    }
+
+    void updateHealth(int attack)
+    {
+        cout << name << "'s health has been dropped from " << health;
+        health = (health < attack) ? 0 : health - attack;
+        cout << " to " << health << "\n";
+    }
+
+    void printHealth() {
+        cout << name << " has " << health << " health points" << endl;
+    }
 };
 
-class Bomba: public Cards
-{
-    public: 
-        Bomba()
-        {
-            name="Bomba";
-            cout << setw(10) << "★★★ Bomba has been summoned ★★★\n\n";
-            power = 500;
-            defense = 50;
-            stars = 3;
-        }
+// Explosive Type (High damage, medium health)
+class Bomba: public Card {
+public:
+    Bomba()
+    {
+        name="Bomba";
+        type = "Explosive";
+        damage = 500;
+        health = 200;
+        cout << setw(10) << name << " has been summoned\n";
+    }
 
-        void setHealth(int attack)
-        {
-            cout << "Bomba's health has been dropped from " << defense;
-            defense -= attack;
-            defense = defense < 0 ? defense = 0: defense;
-            cout << " to " << defense << "\n";
-        }
-        void get()
-        {
-            cout << "His name is BOMBA!!\n";
-            cout << "Current Health: " << defense << "\n";
-            cout << "Attack Power: " << power << "\n";
-            cout << "Stars: " << stars << "\n";
-        }
-
-        ~Bomba()
-        {
-            if(defense <= 0) cout << "Bomba has been destroyed\n\n";
-            else cout << "Bomba has been sacrificed\n";
-        }
+    ~Bomba()
+    {
+        cout << name << " has been destroyed\n";
+    }
 };
 
+// Hunter Type (High damage, low health)
 
+// Giants Type (low damage, high health)
+
+// Warrior Type (medium damage, medium health)
 
 int main()
 {
-    cout << "You summoned a monster: \n";
-    Bomba * us = new Bomba;
-    cout << "Enemy has summoned a monster: \n";
-    Bomba * monster2 = new Bomba;
-    cout << "Enemy has decided to attack!\n";
-    cout << us->name << " has been attacked by opposing " << monster2->name << "\n";
-    us->setHealth(monster2->power);
-    if(us->defense <= 0) delete us;
+    // cout << "You summoned a monster: \n";
+    // Bomba * us = new Bomba;
+    // cout << "Enemy has summoned a monster: \n";
+    // Bomba * monster2 = new Bomba;
+    // cout << "Enemy has decided to attack!\n";
+    // cout << us->name << " has been attacked by opposing " << monster2->name << "\n";
+    // us->setHealth(monster2->power);
+    // if(us->defense <= 0) delete us;
+
+
+    // --------------------------------
+
+    int round = 0, score = 0;
+
+    // assign cards for players (randomly)
+    
+
+    while(round < 5) {     
+        // each round both players pick a card
+
+        // calculate the winning card
+
+        // remove the cards from player's deck 
+
+        // update the score
+        
+
+        round++;
+    }
+
+    // announce the winner (highest score)
+
 }   
