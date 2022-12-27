@@ -5,7 +5,7 @@ class Cards
 {
     public: 
         string name="";
-        int power,defense,stars;
+        int power, defense, stars;
         virtual void setHealth(int attack) = 0;
         virtual void get() = 0;
 };
@@ -22,12 +22,6 @@ class Bomba: public Cards
             stars = 3;
         }
 
-        ~Bomba()
-        {
-            if(defense <= 0) cout << "Bomba has been destroyed\n\n";
-            else cout << "Bomba has been sacrificed\n";
-        }
-
         void setHealth(int attack)
         {
             cout << "Bomba's health has been dropped from " << defense;
@@ -41,6 +35,12 @@ class Bomba: public Cards
             cout << "Current Health: " << defense << "\n";
             cout << "Attack Power: " << power << "\n";
             cout << "Stars: " << stars << "\n";
+        }
+
+        ~Bomba()
+        {
+            if(defense <= 0) cout << "Bomba has been destroyed\n\n";
+            else cout << "Bomba has been sacrificed\n";
         }
 };
 
